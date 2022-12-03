@@ -6,11 +6,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Home | Componentes en TS</title>
         <link rel="stylesheet" href="css/styles.css" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            href="../dist/assets/favicon.ico"
+            type="image/x-icon"
+        />
         <script type="module" src="./index.js"></script>
     </head>
 
     <body>
+        <header>
+            <div class="title-box">
+                <img
+                    class="title"
+                    src="../dist/assets/pokedex_title.webp"
+                    alt="Pokedex title"
+                />
+            </div>
+        </header>
         <div class="root"></div>
+        <main>
+            <ul>
+                <li class="card">
+                    <img
+                        class="pokemon_img"
+                        src="https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d7/latest/20150621185114/Gyarados.png/200px-Gyarados.png"
+                        alt="Gyarados picture"
+                    />
+                    <div class="card_text">
+                        <div class="name">
+                            <h4 class="pokemon_label">Name:</h4>
+                            <p class="pokemon_name">Gyarados</p>
+                        </div>
+                        <div class="number">
+                            <p class="pokemon_label">Number:</p>
+                            <p class="pokemon_number">378</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
     </body>
 </html>
