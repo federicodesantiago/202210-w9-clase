@@ -32,7 +32,51 @@ header {
     width: 20%;
     align-self: center;
 }
-
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.arrowBack {
+    clip-path: polygon(
+        40% 0%,
+        40% 20%,
+        100% 20%,
+        100% 80%,
+        40% 80%,
+        40% 100%,
+        0% 50%
+    );
+}
+.arrowNext {
+    clip-path: polygon(
+        0% 20%,
+        60% 20%,
+        60% 0%,
+        100% 50%,
+        60% 100%,
+        60% 80%,
+        0% 80%
+    );
+}
+.arrowButton {
+    font-size: 0.7rem;
+    color: yellow;
+    font-weight: 600;
+    background-color: #ef5350;
+    border: none;
+    margin-block-start: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+.arrowButton:hover {
+    color: #ef5350;
+    background-color: yellow;
+}
+.cardList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
 .card {
     display: flex;
     flex-direction: column;
@@ -44,7 +88,9 @@ header {
     );
     width: 11rem;
     height: 14rem;
-    margin: 3rem;
+    margin-inline-start: 1rem;
+    margin-block-start: 1rem;
+    margin-inline-end: 0rem;
     border: 0.3rem solid red;
     border-radius: 1rem;
 }
