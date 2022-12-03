@@ -4,19 +4,23 @@ export class Header extends Component {
     constructor(private selector: string) {
         super();
         this.template = this.createTemplate();
-        this.render();
+        this.outRender(selector);
     }
 
     render() {
-        return super.innRender(this.selector);
+        return super.outRender(this.selector);
     }
 
     private createTemplate() {
         return `
-        <header>
-            <h1>
-                Learning Components
-            </h1>
+                <header>
+            <div class="title-box">
+                <img
+                    class="title"
+                    src="../dist/assets/pokedex_title.webp"
+                    alt="Pokedex title"
+                />
+            </div>
         </header>
         `;
     }
