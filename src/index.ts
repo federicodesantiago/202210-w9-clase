@@ -1,11 +1,10 @@
 import { Header } from './components/header/header.js';
 import { itemList } from './components/itemList/itemList.js';
-import { pokemonArray } from './mocks/itemMock.js';
 
 (() => {
     document.addEventListener('DOMContentLoaded', () => {
         new Header('.header');
-        new itemList('.itemCard', pokemonArray);
+        new itemList('.slot-items');
 
         const buttonBack = document.querySelector('.arrowBack');
         if (buttonBack != null) {

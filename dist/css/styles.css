@@ -73,7 +73,7 @@ header {
     color: #ef5350;
     background-color: yellow;
 }
-.cardList {
+.itemCard {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
