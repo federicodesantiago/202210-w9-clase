@@ -3,20 +3,19 @@ export type PokemonType = {
     name: string;
     number: number;
     picture: string;
+    isFavourite: boolean;
+    url: string;
 };
-
 export class ItemPokemon implements PokemonType {
-    static generateId() {
-        const aNumbers = new Uint32Array(1);
-        crypto.getRandomValues(aNumbers);
-        return ('000000' + aNumbers[0]).slice(-6);
-    }
-    id: string;
+    isFavourite: boolean;
+    url: string;
     constructor(
-        public name: string,
+        public id: string,
         public number: number,
+        public name: string,
         public picture: string
     ) {
-        this.id = ItemPokemon.generateId();
+        this.isFavourite = false;
+        this.url = 'https://pokeapi.co/api/v2/pokemon/';
     }
 }

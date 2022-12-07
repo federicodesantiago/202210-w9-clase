@@ -1,23 +1,28 @@
-import { ItemPokemon } from '../../model/itemModel.js';
+import { PokemonType } from '../../model/itemModel.js';
+import { Component } from '../component/component.js';
 
-export class ItemHTML {
-    constructor(public pokemonArray: ItemPokemon) {}
+export class ItemHTML extends Component {
+    constructor(private selector: string, private item: PokemonType) {
+        super();
+        this.template = this.createTemplate(item);
+        this.addRender(selector);
+    }
 
-    createTemplate() {
+    createTemplate(item: PokemonType) {
         return `<li class="card">
                     <img
                         class="pokemon_img"
-                        src=${this.pokemonArray.picture}
-                        alt="${this.pokemonArray.name} picture"
+                        src=${item.picture}
+                        alt="${item.name} picture"
                     />
                     <div class="card_text">
                         <div class="name">
                             <h4 class="pokemon_label">Name:</h4>
-                            <p class="pokemon_name">${this.pokemonArray.name}</p>
+                            <p class="pokemon_name">${item.name}</p>
                         </div>
                         <div class="number">
                             <p class="pokemon_label">Number:</p>
-                            <p class="pokemon_number">${this.pokemonArray.number}</p>
+                            <p class="pokemon_number">${item.id}</p>
                         </div>
                     </div>
                 </li>`;
